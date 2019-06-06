@@ -38,16 +38,17 @@ public class MusicController
     {
         return new ResponseEntity<List<Music>>(musicService.displayAllTracks(),HttpStatus.OK);
     }
+
     @DeleteMapping("/music/{trackId}")
-    public ResponseEntity<?> deleteTrack(@PathVariable int trackId)
-    {
+    public ResponseEntity<?> deleteTrack(@PathVariable int trackId) throws TrackNotFoundException {
         musicService.deleteTrack(trackId);
         return new ResponseEntity<List<Music>>(musicService.displayAllTracks(),HttpStatus.OK);
     }
-    @PutMapping("/music/{trackId}")
-    public ResponseEntity<?> updateTrack(@RequestBody Music music,@PathVariable int trackId) throws TrackNotFoundException {
-        //  try{
-        Music music1 = musicService.updateTrack(music, trackId);
-        return new ResponseEntity<Music>(music1, HttpStatus.OK);
+    @RequestMapping(value = "music", method= RequestMethod.PUT)
+    public ResponseEntity<String> updateTrack(@RequestBody Music music) throws TrackNotFoundException
+    {
+        ResponseEntity responseEntity;
+        Music music1=musicService.updateTrack(music);
+        return new ResponseEntity<String>("Successfully Updated",HttpStatus.OK);
     }
 }

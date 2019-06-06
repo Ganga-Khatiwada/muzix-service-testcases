@@ -10,10 +10,10 @@ import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 @Component
-@PropertySource("classpath:config.properties")
+@PropertySource("classpath:configur.properties")
 public class ContextRefreshed implements ApplicationListener<ContextRefreshedEvent> {
 
-        Music music=new Music();
+        Music music =new Music();
         @Autowired
         MusicRepository musicRepository;
         @Autowired

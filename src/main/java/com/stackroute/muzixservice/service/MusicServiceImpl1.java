@@ -1,7 +1,6 @@
 package com.stackroute.muzixservice.service;
 
 import com.stackroute.muzixservice.domain.Music;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,17 +20,17 @@ public class MusicServiceImpl1 implements MusicService{
     }
 
     @Override
-    public void deleteTrack(int trackId) {
-
+    public Music deleteTrack(int trackId) {
+    return null;
     }
 
     @Override
-    public Music updateTrack(Music music, int trackId) {
+    public Music updateTrack(Music music) {
         return null;
     }
 
     @Override
-    public List<Music> getTrackByName(String trackName) {
+    public Music getTrackByName(String trackName) {
         return null;
     }
 }

@@ -2,6 +2,7 @@ package com.stackroute.muzixservice.controller;
 
 import com.stackroute.muzixservice.exceptions.TrackAlreadyExistsException;
 import com.stackroute.muzixservice.exceptions.TrackNotFoundException;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

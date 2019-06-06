@@ -5,7 +5,6 @@ import com.stackroute.muzixservice.repository.MusicRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -17,7 +16,7 @@ public class CommandLine implements CommandLineRunner {
         @Value("${music.trackComments}")
         private String trackComments;
 
-        Music music=new Music();
+        Music music =new Music();
         @Autowired
         MusicRepository musicRepository;
         @Override
