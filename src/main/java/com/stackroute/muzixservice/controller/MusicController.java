@@ -44,7 +44,7 @@ public class MusicController
         musicService.deleteTrack(trackId);
         return new ResponseEntity<List<Music>>(musicService.displayAllTracks(),HttpStatus.OK);
     }
-    @RequestMapping(value = "music", method= RequestMethod.PUT)
+    @PutMapping("music")
     public ResponseEntity<String> updateTrack(@RequestBody Music music) throws TrackNotFoundException
     {
         ResponseEntity responseEntity;
